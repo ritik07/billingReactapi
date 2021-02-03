@@ -16,6 +16,6 @@ app.use("/api", RavanaRoute);
 
 // app.set("port", PORT);
 
-server.listen(port, () => {
+app.listen(port, () => {
   console.log("App is running on port " + port);
 });
