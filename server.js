@@ -12,6 +12,6 @@ app.get("/", (req, res) => {
 
 // app.use("/api", RavanaRoute);
 
-app.listen(7000, () => {
+app.listen(process.env.PORT || 7000, () => {
   console.log("server up and running");
 });
