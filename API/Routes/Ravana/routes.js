@@ -1,5 +1,5 @@
-const express = require("express");
-const route = express.Router();
+// const express = require("express");
+// const route = express.Router();
 
 route.get("/getravana", (req, res) => {
   res.send("aaya");
@@ -20,4 +20,4 @@ route.get("/getravana", (req, res) => {
 // route.post("/updateravana", updateRavanaFunction);
 // route.post("/deleteravana", deleteRavanaFuction);
 
-module.exports = route;
+// module.exports = route;
