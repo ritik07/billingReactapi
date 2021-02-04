@@ -1,7 +1,7 @@
 const { createPool } = require("mysql");
 
 const pool = createPool({
-  port: 3306,
+  // port: 3306,
   host: "148.66.136.10",
   user: "TEST_ROGER",
   password: "roger1234",
