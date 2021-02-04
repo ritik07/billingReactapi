@@ -3,19 +3,11 @@ const app = express();
 const cors = require("cors");
 const RavanaRoute = require("./API/Routes/Ravana/routes");
 
-const port = process.env.PORT || 8000;
-
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("Working!!!");
-});
-
 app.use("/api", RavanaRoute);
 
-// app.set("port", PORT);
-
-app.listen(port, () => {
-  console.log("App is running on port " + port);
+app.listen(7000, () => {
+  console.log("server up and running");
 });
