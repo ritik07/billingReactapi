@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 
-app.use("/api", RavanaRoute);
+// app.use("/api", RavanaRoute);
 
 app.listen(process.env.PORT || 7000, () => {
   console.log("server up and running");
