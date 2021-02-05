@@ -4,7 +4,7 @@ exports.insertRavana = async (data, callback) => {
   console.log("data", data);
   const sName = data.sName === undefined ? "" : data.sName;
   const sBatteryType = data.sBatteryType === undefined ? 0 : data.sBatteryType;
-  const iBillNo = data.iBillNo === undefined ? "" : data.iBillNo;
+  const iBillNo = data.iBillNo === undefined ? 0 : data.iBillNo;
   const sDate = data.sDate === undefined ? 0 : data.sDate;
 
   let bIsValid = true,
@@ -25,6 +25,21 @@ exports.insertRavana = async (data, callback) => {
     //   sResponse = "Minimum required Address length is 1 and maximum is 250";
     //   iResponseCode = 104;
     // }
+
+    console.log(`INSERT INTO KTC 
+      (
+          name, 
+          billno, 
+          batterytype,
+          date
+      ) 
+      VALUES 
+      ( 
+          '${sName}', 
+           ${iBillNo}, 
+          '${sBatteryType}', 
+          '${sDate}' 
+      )`);
 
     if (bIsValid) {
       await pool.query(
