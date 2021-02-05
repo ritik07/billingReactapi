@@ -48,7 +48,7 @@ exports.insertRavana = async (data, callback) => {
                 name, 
                 billno, 
                 batterytype,
-                date,
+                date
             ) 
             VALUES 
             ( 
