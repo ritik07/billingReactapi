@@ -6,11 +6,11 @@ const { insertRavanaFunction } = require("../../controller/insertRavana");
 const { updateRavanaFunction } = require("../../controller/updateRavana");
 const { deleteRavanaFuction } = require("../../controller/deleteRavana");
 
-route.get("/getravana/", getRavanaFunction);
-route.get("/getravana/:iRavanaID", getRavanaFunction);
+route.get("/getdata", getRavanaFunction);
+// route.get("/getravana/:iRavanaID", getRavanaFunction);
 
-route.post("/insertravana", insertRavanaFunction);
-route.post("/updateravana", updateRavanaFunction);
-route.post("/deleteravana", deleteRavanaFuction);
+route.post("/insertdata", insertRavanaFunction);
+route.post("/updatedata", updateRavanaFunction);
+route.post("/deletedata", deleteRavanaFuction);
 
 module.exports = { routes: route };

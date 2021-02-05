@@ -6,7 +6,7 @@ exports.getRavana = async (data, callback) => {
     sResponse = "All Record Found",
     iResponseCode = 100;
 
-  let sSQL = `Select * from mravana `;
+  let sSQL = `Select * from KTC `;
   if (IuserID > 0) sSQL = sSQL + `where id=${IuserID}`;
 
   try {
