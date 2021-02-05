@@ -1,4 +1,4 @@
-const { insertRavana } = require("../../Query/Ravana/insertRavana");
+const { insertRavana } = require("../query/ravana/insertRavana");
 
 module.exports = {
   insertRavanaFunction: (req, res) => {

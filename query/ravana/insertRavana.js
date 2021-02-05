@@ -1,4 +1,4 @@
-const pool = require("../../../config/database");
+const pool = require("../../database");
 
 exports.insertRavana = async (data, callback) => {
   console.log("data", data);

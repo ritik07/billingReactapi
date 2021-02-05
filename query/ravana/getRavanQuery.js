@@ -1,4 +1,4 @@
-const pool = require("../../../config/database");
+const pool = require("../../database");
 
 exports.getRavana = async (data, callback) => {
   const IuserID = data.IuserID === undefined ? 0 : data.IuserID;

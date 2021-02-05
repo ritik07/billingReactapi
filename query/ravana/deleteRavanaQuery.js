@@ -1,4 +1,4 @@
-const pool = require("../../../config/database");
+const pool = require("../../database");
 
 exports.deleteRavana = async (data, callback) => {
   const iRavanaID = data.iRavanaID;

@@ -1,4 +1,4 @@
-const { getRavana } = require("../../Query/Ravana/getRavanQuery");
+const { getRavana } = require("../query/ravana/getRavanQuery");
 
 module.exports = {
   getRavanaFunction: (req, res) => {

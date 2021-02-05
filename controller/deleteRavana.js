@@ -1,4 +1,4 @@
-const { deleteRavana } = require("../../Query/Ravana/deleteRavanaQuery");
+const { deleteRavana } = require("../query/ravana/deleteRavanaQuery");
 
 module.exports = {
   deleteRavanaFuction: (req, res) => {

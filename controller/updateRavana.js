@@ -1,4 +1,4 @@
-const { updateRavana } = require("../../Query/Ravana/updateRavana");
+const { updateRavana } = require("../query/ravana/updateRavana");
 
 module.exports = {
   updateRavanaFunction: (req, res) => {

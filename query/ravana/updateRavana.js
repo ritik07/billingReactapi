@@ -1,4 +1,4 @@
-const pool = require("../../../config/database");
+const pool = require("../../database");
 
 exports.updateRavana = async (data, callback) => {
   console.log("data", data);
