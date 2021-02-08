@@ -76,9 +76,9 @@ VALUES
             VALUES 
             ( 
                 '${sPartyName}', 
-                ${iMLNO}, 
+                '${iMLNO}', 
                 '${sAddress}', 
-                ${iRavanaNo}, 
+                '${iRavanaNo}', 
                 '${sRavanaWT}', 
                 '${sReceivedWT}', 
                 '${sWTmargin}', 

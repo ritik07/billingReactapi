@@ -80,9 +80,9 @@ exports.updateRavana = async (data, callback) => {
       console.log(`UPDATE mravana 
       SET
       PartyName = '${sPartyName}', 
-      mlno = ${iMLNO}, 
+      mlno = '${iMLNO}', 
       address = '${sAddress}', 
-      ravanano = ${iRavanaNo},
+      ravanano = '${iRavanaNo}',
       RavanaWT = '${sRavanaWT}',
       ReceivedWT = '${sReceivedWT}',
       WTmargin = '${sWTmargin}',
