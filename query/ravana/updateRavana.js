@@ -20,19 +20,19 @@ exports.updateRavana = async (data, callback) => {
     iResponseCode = 102;
 
   try {
-    if (sPartyName.length <= 1 || sPartyName.length > 250) {
-      bIsValid = false;
-      sResponse = "Minimum required Party Name is 2 and maximum is 250";
-      iResponseCode = 104;
-    } else if (iMLNO === 0) {
-      bIsValid = false;
-      sResponse = "Minimum required MLNO length is 1 and maximum is 250";
-      iResponseCode = 104;
-    } else if (sAddress.length < 1 || sAddress.length > 250) {
-      bIsValid = false;
-      sResponse = "Minimum required Address length is 1 and maximum is 250";
-      iResponseCode = 104;
-    }
+    // if (sPartyName.length <= 1 || sPartyName.length > 250) {
+    //   bIsValid = false;
+    //   sResponse = "Minimum required Party Name is 2 and maximum is 250";
+    //   iResponseCode = 104;
+    // } else if (iMLNO === 0) {
+    //   bIsValid = false;
+    //   sResponse = "Minimum required MLNO length is 1 and maximum is 250";
+    //   iResponseCode = 104;
+    // } else if (sAddress.length < 1 || sAddress.length > 250) {
+    //   bIsValid = false;
+    //   sResponse = "Minimum required Address length is 1 and maximum is 250";
+    //   iResponseCode = 104;
+    // }
 
     // if (bIsValid) {
     //   const checkId = await pool.query(
