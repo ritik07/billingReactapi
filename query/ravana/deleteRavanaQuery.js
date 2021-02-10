@@ -9,8 +9,10 @@ exports.deleteRavana = async (data, callback) => {
 
   try {
     if (bIsValid) {
-      console.log(`DELETE FROM KTC where id=${iRavanaID}`);
-      const results = await pool.query(`DELETE FROM KTC where id=${iRavanaID}`);
+      console.log(`DELETE FROM mravana where ravanaid=${iRavanaID}`);
+      const results = await pool.query(
+        `DELETE FROM mravana where ravanaid=${iRavanaID}`
+      );
     }
   } catch (err) {
     bIsValid = false;

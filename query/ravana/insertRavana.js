@@ -1,17 +1,25 @@
 const pool = require("../../database");
-
+const moment = require("moment");
 exports.insertRavana = async (data, callback) => {
-  console.log("data", data);
-  const sName = data.sName === undefined ? "" : data.sName;
-  const sBatteryType = data.sBatteryType === undefined ? 0 : data.sBatteryType;
-  const iBillNo = data.iBillNo === undefined ? 0 : data.iBillNo;
-  const sDate = data.sDate === undefined ? 0 : data.sDate;
+  // console.log("data", data);
+  const sPartyName = data.sPartyName === undefined ? "" : data.sPartyName;
+  const iMLNO = data.iMLNO === undefined ? 0 : data.iMLNO;
+  const sAddress = data.sAddress === undefined ? "" : data.sAddress;
+  const iRavanaNo = data.iRavanaNo === undefined ? 0 : data.iRavanaNo;
+  const sRavanaWT = data.sRavanaWT;
+  const sReceivedWT = data.sReceivedWT;
+  const sWTmargin = data.sWTmargin;
+  const sVeicleNo = data.sVeicleNo;
+  const sVeicleowner = data.sVeicleowner;
+  const sContractor = data.sContractor;
+  const sDate = data.sDate;
 
   let bIsValid = true,
     sResponse = "Record Added successfully",
     iResponseCode = 101;
 
   try {
+    // console.log(sPartyName.length);
     // if (sPartyName.length <= 1 || sPartyName.length > 250) {
     //   bIsValid = false;
     //   sResponse = "Minimum required Party Name is 2 and maximum is 250";
@@ -25,37 +33,63 @@ exports.insertRavana = async (data, callback) => {
     //   sResponse = "Minimum required Address length is 1 and maximum is 250";
     //   iResponseCode = 104;
     // }
-
-    console.log(`INSERT INTO KTC 
-      (
-          name, 
-          billno, 
-          batterytype,
-          date
-      ) 
-      VALUES 
-      ( 
-          '${sName}', 
-           ${iBillNo}, 
-          '${sBatteryType}', 
-          '${sDate}' 
-      )`);
-
+    console.log(`INSERT INTO mravana 
+(
+    partyname, 
+    mlno, 
+    address,
+    ravanano,
+    ravanawt, 
+    receivedwt, 
+    wtmargin, 
+    vehicleno, 
+    contractor, 
+    vehicleowner,
+    date
+) 
+VALUES 
+( 
+    '${sPartyName}', 
+    '${iMLNO}', 
+    '${sAddress}', 
+    '${iRavanaNo}', 
+    '${sRavanaWT}', 
+    '${sReceivedWT}', 
+    '${sWTmargin}', 
+    '${sVeicleNo}', 
+    '${sContractor}', 
+    '${sVeicleowner}',
+    '${sDate}'
+    );`);
     if (bIsValid) {
       await pool.query(
-        `INSERT INTO KTC 
-            (
-                name, 
-                billno, 
-                batterytype,
-                date
-            ) 
-            VALUES 
-            ( 
-                '${sName}', 
-                 ${iBillNo}, 
-                '${sBatteryType}', 
-                '${sDate}' 
+        `INSERT INTO mravana 
+        (
+            partyname, 
+            mlno, 
+            address,
+            ravanano,
+            ravanawt, 
+            receivedwt, 
+            wtmargin, 
+            vehicleno, 
+            contractor, 
+            vehicleowner,
+            date
+        ) 
+        VALUES 
+        ( 
+            '${sPartyName}', 
+            '${iMLNO}', 
+            '${sAddress}', 
+            '${iRavanaNo}', 
+            '${sRavanaWT}', 
+            '${sReceivedWT}', 
+            '${sWTmargin}', 
+            '${sVeicleNo}', 
+            '${sContractor}', 
+            '${sVeicleowner}',
+            '${moment(data.sDate).format("DD-MMM-YYYY hh:mm a")}'
             );`
       );
     }
